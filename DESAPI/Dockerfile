@@ -1,25 +1,22 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER app
+﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
+EXPOSE 80
+EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["DESAPI/DESAPI.csproj", "DESAPI/"]
-RUN dotnet restore "./DESAPI/DESAPI.csproj"
-COPY . .
-WORKDIR "/src/DESAPI"
-RUN dotnet build "./DESAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./DESAPI.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+# COPY file csproj riêng để cache tốt hơn
+COPY DESAPI.csproj ./
+RUN dotnet restore DESAPI.csproj
+
+# COPY toàn bộ source code
+COPY . .
+
+# BUILD
+RUN dotnet publish DESAPI.csproj -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build /app/publish .
 ENTRYPOINT ["dotnet", "DESAPI.dll"]

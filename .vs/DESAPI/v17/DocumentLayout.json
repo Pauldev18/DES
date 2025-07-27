@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{C9926F36-DCEF-4756-BFBF-CB29C4B1081D}|DESAPI\\DESAPI.csproj|solutionrelative:desapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9926F36-DCEF-4756-BFBF-CB29C4B1081D}|DESAPI\\DESAPI.csproj|c:\\users\\admin\\downloads\\desapi\\desapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{C9926F36-DCEF-4756-BFBF-CB29C4B1081D}|DESAPI\\DESAPI.csproj|C:\\Users\\admin\\Downloads\\DESAPI\\desapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C9926F36-DCEF-4756-BFBF-CB29C4B1081D}|DESAPI\\DESAPI.csproj|solutionrelative:desapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
@@ -92,7 +92,7 @@
               "RelativeDocumentMoniker": "DESAPI\\Dockerfile",
               "ToolTip": "C:\\Users\\admin\\Downloads\\DESAPI\\DESAPI\\Dockerfile",
               "RelativeToolTip": "DESAPI\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAgAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-07-27T16:27:13.257Z",
               "EditorCaption": ""
@@ -107,8 +107,7 @@
               "RelativeToolTip": "DESAPI\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-27T16:08:44.376Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T16:08:44.376Z"
             },
             {
               "$type": "Document",
