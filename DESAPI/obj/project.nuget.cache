@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ni3leaSMsAD7GFU9e5HBSlvS05S3q0o6CJ7Ea/upuTN3Hg7ght7AJlwrYppongMvmUCqGbWe5xIEHWsfGvi2jQ==",
+  "dgSpecHash": "Pj88XtHxBVycv4o66RZvRV+RMiuMKnorwpycx4V1Ww5y5HccTlRvnkpDGThRXitL6R98/tZ/izO2zijIP6XmWg==",
   "success": true,
   "projectFilePath": "C:\\Users\\admin\\Downloads\\DESAPI\\DESAPI\\DESAPI.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\mysql.data\\9.4.0\\mysql.data.9.4.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
