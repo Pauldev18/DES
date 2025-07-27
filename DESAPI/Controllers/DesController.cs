@@ -15,7 +15,6 @@ namespace DESAPI.Controllers
         {
             _configuration = configuration;
         }
-
         [HttpPost("encrypt")]
         public IActionResult Encrypt([FromBody] EncryptRequest request)
         {
@@ -25,8 +24,9 @@ namespace DESAPI.Controllers
             using var conn = new MySqlConnection(connStr);
             conn.Open();
 
-            var cmd = new MySqlCommand("INSERT INTO sbds (des) VALUES (@des)", conn);
+            var cmd = new MySqlCommand("INSERT INTO sbds (des, type) VALUES (@des, @type)", conn);
             cmd.Parameters.AddWithValue("@des", cipher);
+            cmd.Parameters.AddWithValue("@type", request.Type); 
 
             if (cmd.ExecuteNonQuery() > 0)
             {
@@ -49,7 +49,7 @@ namespace DESAPI.Controllers
             return Ok(new ResultResponse { Success = true, Data = plain, Message = "Decrypted successfully" });
         }
 
-        private string EncryptString(string message, string passphrase = "aaffcc")
+        private string EncryptString(string message, string passphrase = "lucky123@123")
         {
             using var md5Crypto = MD5.Create();
             var keyMd5 = md5Crypto.ComputeHash(Encoding.UTF8.GetBytes(passphrase));
@@ -65,7 +65,7 @@ namespace DESAPI.Controllers
             return Convert.ToBase64String(encryptedBytes);
         }
 
-        private string DecryptString(string cipher, string passphrase = "aaffcc")
+        private string DecryptString(string cipher, string passphrase = "lucky123@123")
         {
             try
             {
