@@ -49,7 +49,7 @@ namespace DESAPI.Controllers
             return Ok(new ResultResponse { Success = true, Data = plain, Message = "Decrypted successfully" });
         }
 
-        private string EncryptString(string message, string passphrase = "lucky123@123")
+        private string EncryptString(string message, string passphrase = "aaffcc112233")
         {
             using var md5Crypto = MD5.Create();
             var keyMd5 = md5Crypto.ComputeHash(Encoding.UTF8.GetBytes(passphrase));
@@ -65,7 +65,7 @@ namespace DESAPI.Controllers
             return Convert.ToBase64String(encryptedBytes);
         }
 
-        private string DecryptString(string cipher, string passphrase = "lucky123@123")
+        private string DecryptString(string cipher, string passphrase = "aaffcc112233")
         {
             try
             {
