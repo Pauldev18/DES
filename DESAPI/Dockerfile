@@ -1,22 +1,27 @@
 ﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+USER app
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
+EXPOSE 8080
+EXPOSE 8081
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
-# COPY file csproj riêng để cache tốt hơn
-COPY DESAPI.csproj ./
-RUN dotnet restore DESAPI.csproj
-
-# COPY toàn bộ source code
+# 🔹 Copy toàn bộ solution context
 COPY . .
 
-# BUILD
-RUN dotnet publish DESAPI.csproj -c Release -o /app/publish
+# 🔹 Restore lại từ csproj chính (đã có ESmart.* context)
+RUN dotnet restore "DESAPI/DESAPI.csproj"
+
+WORKDIR "/src/DESAPI"
+RUN dotnet build "DESAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build
+
+FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "DESAPI.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
-COPY --from=build /app/publish .
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "DESAPI.dll"]
