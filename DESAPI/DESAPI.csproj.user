@@ -8,4 +8,18 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
+  <Target Name="CopyESmartDll" AfterTargets="Build">
+  <Copy SourceFiles="bin\Debug\net8.0\ESmart.Data.dll" DestinationFolder="lib" />
+  <Copy SourceFiles="bin\Debug\net8.0\ESmart.QData.dll" DestinationFolder="lib" />
+</Target>
+
+<ItemGroup>
+  <Reference Include="ESmart.Data">
+    <HintPath>lib/ESmart.Data.dll</HintPath>
+  </Reference>
+  <Reference Include="ESmart.QData">
+    <HintPath>lib/ESmart.QData.dll</HintPath>
+  </Reference>
+</ItemGroup>
+
 </Project>
