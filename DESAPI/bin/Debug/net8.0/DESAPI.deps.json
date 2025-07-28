@@ -10,7 +10,10 @@
         "dependencies": {
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.19.6",
           "MySql.Data": "9.4.0",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "System.Drawing.Common": "9.0.7",
+          "ESmart.Data": "1.0.9257.14777",
+          "ESmart.QData": "1.1.0.0"
         },
         "runtime": {
           "DESAPI.dll": {}
@@ -73,6 +76,22 @@
         }
       },
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.19.6": {},
+      "Microsoft.Win32.SystemEvents/9.0.7": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.725.31616"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.725.31616"
+          }
+        }
+      },
       "MySql.Data/9.4.0": {
         "dependencies": {
           "BouncyCastle.Cryptography": "2.5.1",
@@ -183,6 +202,21 @@
         }
       },
       "System.Diagnostics.EventLog/8.0.0": {},
+      "System.Drawing.Common/9.0.7": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "9.0.7"
+        },
+        "runtime": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.725.31604"
+          },
+          "lib/net8.0/System.Private.Windows.Core.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.725.31604"
+          }
+        }
+      },
       "System.IO/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -316,6 +350,22 @@
             "fileVersion": "0.8.5.0"
           }
         }
+      },
+      "ESmart.Data/1.0.9257.14777": {
+        "runtime": {
+          "ESmart.Data.dll": {
+            "assemblyVersion": "1.0.9257.14777",
+            "fileVersion": "1.0.9257.14777"
+          }
+        }
+      },
+      "ESmart.QData/1.1.0.0": {
+        "runtime": {
+          "ESmart.QData.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
       }
     }
   },
@@ -395,6 +445,13 @@
       "path": "microsoft.visualstudio.azure.containers.tools.targets/1.19.6",
       "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512"
     },
+    "Microsoft.Win32.SystemEvents/9.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lFGY2aGgmMREPJEfOmZcA6v0CLjWVpcfNHRgqYMoSQhy80+GxhYqdW5xe+DCLrVqE1M7/0RpOkIo49/KH/cd/A==",
+      "path": "microsoft.win32.systemevents/9.0.7",
+      "hashPath": "microsoft.win32.systemevents.9.0.7.nupkg.sha512"
+    },
     "MySql.Data/9.4.0": {
       "type": "package",
       "serviceable": true,
@@ -457,6 +514,13 @@
       "sha512": "sha512-fdYxcRjQqTTacKId/2IECojlDSFvp7LP5N78+0z/xH7v/Tuw5ZAxu23Y6PTCRinqyu2ePx+Gn1098NC6jM6d+A==",
       "path": "system.diagnostics.eventlog/8.0.0",
       "hashPath": "system.diagnostics.eventlog.8.0.0.nupkg.sha512"
+    },
+    "System.Drawing.Common/9.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1k/Pk7hcM3vP2tfIRRS2ECCCN7ya+hvocsM1JMc4ZDCU6qw7yOuUmqmCDfgXZ4Q4FS6jass2EAai5ByKodDi0g==",
+      "path": "system.drawing.common/9.0.7",
+      "hashPath": "system.drawing.common.9.0.7.nupkg.sha512"
     },
     "System.IO/4.3.0": {
       "type": "package",
@@ -576,6 +640,16 @@
       "sha512": "sha512-TR4j17WeVSEb3ncgL2NqlXEqcy04I+Kk9CaebNDplUeL8XOgjkZ7fP4Wg4grBdPLIqsV86p2QaXTkZoRMVOsew==",
       "path": "zstdsharp.port/0.8.5",
       "hashPath": "zstdsharp.port.0.8.5.nupkg.sha512"
+    },
+    "ESmart.Data/1.0.9257.14777": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ESmart.QData/1.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -1,6 +1,16 @@
 [
   {
     "ContainingType": "DESAPI.Controllers.DesController",
+    "Method": "GetAllCauHoiLT",
+    "RelativePath": "api/Des/cauhoilt",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DESAPI.Controllers.DesController",
     "Method": "Decrypt",
     "RelativePath": "api/Des/decrypt",
     "HttpMethod": "POST",
@@ -26,6 +36,22 @@
       {
         "Name": "request",
         "Type": "DESAPI.Models.EncryptRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DESAPI.Controllers.DesController",
+    "Method": "SubmitKetQua",
+    "RelativePath": "api/Des/submit-ketqua",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "DESAPI.Models.SubmitRequest",
         "IsRequired": true
       }
     ],

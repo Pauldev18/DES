@@ -53,3 +53,9 @@ C:\Users\admin\Downloads\DESAPI\DESAPI\obj\Debug\net8.0\refint\DESAPI.dll
 C:\Users\admin\Downloads\DESAPI\DESAPI\obj\Debug\net8.0\DESAPI.pdb
 C:\Users\admin\Downloads\DESAPI\DESAPI\obj\Debug\net8.0\DESAPI.genruntimeconfig.cache
 C:\Users\admin\Downloads\DESAPI\DESAPI\obj\Debug\net8.0\ref\DESAPI.dll
+C:\Users\admin\Downloads\DESAPI\DESAPI\bin\Debug\net8.0\ESmart.Data.dll
+C:\Users\admin\Downloads\DESAPI\DESAPI\bin\Debug\net8.0\ESmart.QData.dll
+C:\Users\admin\Downloads\DESAPI\DESAPI\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\admin\Downloads\DESAPI\DESAPI\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\admin\Downloads\DESAPI\DESAPI\bin\Debug\net8.0\System.Private.Windows.Core.dll
+C:\Users\admin\Downloads\DESAPI\DESAPI\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
