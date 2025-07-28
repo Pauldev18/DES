@@ -130,7 +130,7 @@ namespace DESAPI.Controllers
             { "B.04", 30 },
             { "B.05", 30 },
             { "B",    30 },
-            { "B1M", 30 },
+            { "B1M", 25 },
 
             // C1
             { "C1", 35 },
