@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DESAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5087e518b31835978b3f57b072e358a40b5eaf8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7464822c517bd728adbc22a789d77dd1e416438")]
 [assembly: System.Reflection.AssemblyProductAttribute("DESAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DESAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
