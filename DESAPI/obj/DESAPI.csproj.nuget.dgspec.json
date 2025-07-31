@@ -56,9 +56,9 @@
               "target": "Package",
               "version": "[1.19.6, )"
             },
-            "MySql.Data": {
+            "Npgsql": {
               "target": "Package",
-              "version": "[9.4.0, )"
+              "version": "[9.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

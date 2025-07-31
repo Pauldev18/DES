@@ -2,7 +2,7 @@
 using ESmart.Data;
 using ESmart.QData;
 using Microsoft.AspNetCore.Mvc;
-using MySql.Data.MySqlClient;
+using Npgsql;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
@@ -26,10 +26,10 @@ namespace DESAPI.Controllers
             string cipher = EncryptString(request.PlainText);
             var connStr = _configuration.GetConnectionString("DefaultConnection");
             Console.WriteLine(connStr);
-            using var conn = new MySqlConnection(connStr);
+            using var conn = new NpgsqlConnection(connStr);
             conn.Open();
 
-            var cmd = new MySqlCommand("INSERT INTO sbds (des, type) VALUES (@des, @type)", conn);
+            var cmd = new NpgsqlCommand("INSERT INTO SBDS (des, type) VALUES (@des, @type)", conn);
             cmd.Parameters.AddWithValue("@des", cipher);
             cmd.Parameters.AddWithValue("@type", request.Type); 
 
@@ -164,10 +164,10 @@ namespace DESAPI.Controllers
             string connStr = _configuration.GetConnectionString("DefaultConnection");
 
             // B1: Insert trạng thái PROCESS
-            using var conn = new MySqlConnection(connStr);
+            using var conn = new NpgsqlConnection(connStr);
             conn.Open();
 
-            using (var insertCmd = new MySqlCommand("INSERT INTO sbds (des, type) VALUES (@des, @type)", conn))
+            using (var insertCmd = new NpgsqlCommand("INSERT INTO SBDS (des, type) VALUES (@des, @type)", conn))
             {
                 insertCmd.Parameters.AddWithValue("@des", request.MaDK);
                 insertCmd.Parameters.AddWithValue("@type", "PROCESS");
@@ -179,7 +179,7 @@ namespace DESAPI.Controllers
             if (string.IsNullOrEmpty(decrypted))
             {
                 // B2: Update trạng thái FAILED
-                using var updateFailCmd = new MySqlCommand("UPDATE sbds SET type = @type WHERE des = @des", conn);
+                using var updateFailCmd = new NpgsqlCommand("UPDATE SBDS SET type = @type WHERE des = @des", conn);
                 updateFailCmd.Parameters.AddWithValue("@type", "FAILED");
                 updateFailCmd.Parameters.AddWithValue("@des", request.MaDK);
                 updateFailCmd.ExecuteNonQuery();
@@ -251,7 +251,7 @@ namespace DESAPI.Controllers
                         Console.WriteLine($"❌ Không tìm thấy câu hỏi với ID: {id} (chuỗi gốc: {pairs[i]})");
 
                         // B2: Update trạng thái FAILED
-                        using var updateFailCmd = new MySqlCommand("UPDATE sbds SET type = @type WHERE des = @des", conn);
+                        using var updateFailCmd = new NpgsqlCommand("UPDATE SBDS SET type = @type WHERE des = @des", conn);
                         updateFailCmd.Parameters.AddWithValue("@type", "FAILED");
                         updateFailCmd.Parameters.AddWithValue("@des", request.MaDK);
                         updateFailCmd.ExecuteNonQuery();
@@ -289,7 +289,7 @@ namespace DESAPI.Controllers
             string chuoiKetQua = string.Join(";", ketQuaChuan.Select(x => $"{x.ID}-{x.CauChon}")) + ";";
             string ketQuaMaHoa = EncryptString(chuoiKetQua, request.MaDK);
             // B3: Update trạng thái SUCCESS
-            using (var updateCmd = new MySqlCommand("UPDATE sbds SET type = @type WHERE des = @des", conn))
+            using (var updateCmd = new NpgsqlCommand("UPDATE SBDS SET type = @type WHERE des = @des", conn))
             {
                 updateCmd.Parameters.AddWithValue("@type", "SUCCESS");
                 updateCmd.Parameters.AddWithValue("@des", request.MaDK);
