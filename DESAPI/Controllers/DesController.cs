@@ -27,7 +27,9 @@ namespace DESAPI.Controllers
             var connStr = _configuration.GetConnectionString("DefaultConnection");
             Console.WriteLine(connStr);
             using var conn = new NpgsqlConnection(connStr);
+
             conn.Open();
+         
 
             var cmd = new NpgsqlCommand("INSERT INTO SBDS (des, type) VALUES (@des, @type)", conn);
             cmd.Parameters.AddWithValue("@des", cipher);

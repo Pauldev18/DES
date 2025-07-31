@@ -1,7 +1,7 @@
 ﻿using System;
 
-AppContext.SetSwitch("Npgsql.DisableIPv6", true); 
-
+AppContext.SetSwitch("System.Net.DisableIPv6", true);
+Console.WriteLine("IPv6 Disabled: " + AppContext.TryGetSwitch("System.Net.DisableIPv6", out var disabled) + " = " + disabled);
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
