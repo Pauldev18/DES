@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{C9926F36-DCEF-4756-BFBF-CB29C4B1081D}|DESAPI\\DESAPI.csproj|solutionrelative:desapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9926F36-DCEF-4756-BFBF-CB29C4B1081D}|DESAPI\\DESAPI.csproj|c:\\users\\admin\\downloads\\desapi\\desapi\\controllers\\descontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C9926F36-DCEF-4756-BFBF-CB29C4B1081D}|DESAPI\\DESAPI.csproj|C:\\Users\\admin\\Downloads\\DESAPI\\desapi\\controllers\\descontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9926F36-DCEF-4756-BFBF-CB29C4B1081D}|DESAPI\\DESAPI.csproj|solutionrelative:desapi\\controllers\\descontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -116,7 +116,7 @@
               "RelativeDocumentMoniker": "DESAPI\\appsettings.Development.json",
               "ToolTip": "C:\\Users\\admin\\Downloads\\DESAPI\\DESAPI\\appsettings.Development.json",
               "RelativeToolTip": "DESAPI\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-07-31T08:44:45.23Z",
               "EditorCaption": ""
@@ -191,8 +191,7 @@
               "RelativeToolTip": "DESAPI\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-27T16:08:44.376Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T16:08:44.376Z"
             },
             {
               "$type": "Document",
@@ -204,8 +203,7 @@
               "RelativeToolTip": "DESAPI\\Controllers\\DesController.cs",
               "ViewState": "AQIAAJcAAAAAAAAAAAAiwJAAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T16:07:46.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T16:07:46.047Z"
             },
             {
               "$type": "Document",
