@@ -25,7 +25,7 @@ namespace DESAPI.Controllers
         {
             string cipher = EncryptString(request.PlainText);
             var connStr = _configuration.GetConnectionString("DefaultConnection");
-
+            Console.WriteLine(connStr);
             using var conn = new MySqlConnection(connStr);
             conn.Open();
 
