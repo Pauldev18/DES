@@ -24,7 +24,7 @@ namespace DESAPI.Controllers
         public IActionResult Encrypt([FromBody] EncryptRequest request)
         {
             string cipher = EncryptString(request.PlainText);
-            var connStr = _configuration.GetConnectionString("DefaultConnectionAm");
+            var connStr = _configuration.GetConnectionString("DefaultConnection");
 
             using var conn = new MySqlConnection(connStr);
             conn.Open();
