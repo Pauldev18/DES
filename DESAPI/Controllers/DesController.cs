@@ -24,7 +24,7 @@ namespace DESAPI.Controllers
         public IActionResult Encrypt([FromBody] EncryptRequest request)
         {
             string cipher = EncryptString(request.PlainText);
-            var connStr = _configuration.GetConnectionString("DefaultConnection");
+            var connStr = _configuration.GetConnectionString("DefaultConnectionAm");
 
             using var conn = new MySqlConnection(connStr);
             conn.Open();
@@ -44,15 +44,24 @@ namespace DESAPI.Controllers
         [HttpPost("decrypt")]
         public IActionResult Decrypt([FromBody] DecryptRequest request)
         {
-            string plain = DecryptString(request.CipherText);
+            if (string.IsNullOrEmpty(request.CipherText))
+            {
+                return BadRequest(new ResultResponse { Success = false, Message = "Thiếu CipherText." });
+            }
+
+            // Nếu MaDK rỗng thì dùng pass mặc định "aaffcc"
+            string passphrase = string.IsNullOrWhiteSpace(request.MaDK) ? "aaffcc" : request.MaDK;
+
+            string plain = DecryptString(request.CipherText, passphrase);
 
             if (string.IsNullOrEmpty(plain))
             {
-                return BadRequest(new ResultResponse { Success = false, Message = "Decryption failed" });
+                return BadRequest(new ResultResponse { Success = false, Message = "Giải mã thất bại." });
             }
 
-            return Ok(new ResultResponse { Success = true, Data = plain, Message = "Decrypted successfully" });
+            return Ok(new ResultResponse { Success = true, Data = plain, Message = "Giải mã thành công." });
         }
+
 
         [HttpGet("cauhoilt")]
         public IActionResult GetAllCauHoiLT()
