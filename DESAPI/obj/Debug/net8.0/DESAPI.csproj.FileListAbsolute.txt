@@ -5,8 +5,6 @@ C:\Users\admin\Downloads\DESAPI\DESAPI\bin\Debug\net8.0\DESAPI.deps.json
 C:\Users\admin\Downloads\DESAPI\DESAPI\bin\Debug\net8.0\DESAPI.runtimeconfig.json
 C:\Users\admin\Downloads\DESAPI\DESAPI\bin\Debug\net8.0\DESAPI.dll
 C:\Users\admin\Downloads\DESAPI\DESAPI\bin\Debug\net8.0\DESAPI.pdb
-C:\Users\admin\Downloads\DESAPI\DESAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\admin\Downloads\DESAPI\DESAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\admin\Downloads\DESAPI\DESAPI\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\admin\Downloads\DESAPI\DESAPI\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\admin\Downloads\DESAPI\DESAPI\bin\Debug\net8.0\Npgsql.dll
